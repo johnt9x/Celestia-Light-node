@@ -16,7 +16,7 @@ check your wallet address is the same as your old wallet
 ```
 cel-key add my_celes_key --recover --keyring-backend test --node.type light --p2p.network blockspacerace
 ```
-y
+> y
 > Enter your bip39 mnemonic
 ...
 # Upload keys from locol machine (your computer)
