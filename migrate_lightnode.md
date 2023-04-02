@@ -20,7 +20,7 @@ cel-key add my_celes_key --recover --keyring-backend test --node.type light --p2
 > y
 > Enter your bip39 mnemonic
 ...
-# Upload keys from locol machine (your computer)
+# Upload keys from locol machine (your computer) open cmd
 scp -r /Users/keys root@YourIP:/root/.celestia-light-blockspacerace-0/
 # Setting init
 ```
