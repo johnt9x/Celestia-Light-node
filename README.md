@@ -51,11 +51,13 @@ sudo mv $HOME/celestia-node/cel-key /usr/local/bin/
 ```
 celestia light init --p2p.network blockspacerace
 ```
-# Run node with port 26659, change ip-addr = address VPS (Update in systemd service)
+# Run node with port 26659 
+- Change ip-addr = address VPS (Update in systemd service)
 ```
 light start --p2p.network blockspacerace --core.ip (Your IP) --gateway --gateway.addr (Your IP) --gateway.port 26659
 ```
-# Run node with RPC, use port 26657. change ip-addr = address VPS (Update in systemd service)
+# Run node with RPC, use port 26657. 
+- Change ip-addr = address VPS (Update in systemd service)
 ```
 light start --core.ip https://rpc-blockspacerace.pops.one/ --gateway --gateway.addr (Your IP) --gateway.port 26657 --p2p.network blockspacerace
 ```
