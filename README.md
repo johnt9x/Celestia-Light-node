@@ -110,5 +110,5 @@ rm /etc/systemd/system/celestia-lightd.service
 sudo systemctl daemon-reload
 cd $HOME
 rm -rf .celestia-lightd celestia-node
-rm root/.celestia-light-blockspacerace-0
+rm -r $HOME/.celestia-light-blockspacerace-0
 ```
