@@ -1,6 +1,7 @@
 # Stop service on old machine
 # Save keys folder & seed phrase from old machine to local machine (your computer)
 You can save in any way you know. This my way.
+Open cmd from your computer
 ```
 scp -r root@YourIP:/root/.celestia-light-blockspacerace-0/keys /Users
 ```
