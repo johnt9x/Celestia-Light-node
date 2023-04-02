@@ -1,8 +1,14 @@
 # Celestia-Light-node
 Guide celestia light node
 https://docs.celestia.org/nodes/light-node/
+# Hardware requirements
+The following minimum hardware requirements are recommended for running a light node:
 
-# Celestia-Light-Node
+Memory: 2 GB RAM
+CPU: Single Core
+Disk: 5 GB SSD Storage
+Bandwidth: 56 Kbps for Download/56 Kbps for Upload
+
 # Update system and install build tools
 ```
 sudo apt update && sudo apt upgrade -y
