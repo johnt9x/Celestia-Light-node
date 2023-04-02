@@ -51,23 +51,23 @@ sudo mv $HOME/celestia-node/cel-key /usr/local/bin/
 ```
 celestia light init --p2p.network blockspacerace
 ```
-# Run node with port 26659 
-- Change ip-addr = address VPS (Update in systemd service)
+# Run node with port 26659 (If you are using systemd, skip this step)
+- Change your IP 
 ```
-light start --p2p.network blockspacerace --core.ip (Your IP) --gateway --gateway.addr (Your IP) --gateway.port 26659
+celestia light start --p2p.network blockspacerace --core.ip (Your IP) --gateway --gateway.addr (Your IP) --gateway.port 26659
 ```
-# Run node with RPC, use port 26657. 
-- Change ip-addr = address VPS (Update in systemd service)
+# Run node with RPC, use port 26657 (If you are using systemd, skip this step) 
+- Change your IP 
 ```
-light start --core.ip https://rpc-blockspacerace.pops.one/ --gateway --gateway.addr (Your IP) --gateway.port 26657 --p2p.network blockspacerace
+celestia light start --core.ip https://rpc-blockspacerace.pops.one/ --gateway --gateway.addr (Your IP) --gateway.port 26657 --p2p.network blockspacerace
 ```
 # Creat new wallet:
 ```
-cel-key add wallet --keyring-backend test --node.type light --p2p.network blockspacerace
+cel-key add my_celes_key --keyring-backend test --node.type light --p2p.network blockspacerace
 ```
 # Recover wallet:
 ```
-cel-key add wallet --recover --keyring-backend test --node.type light --p2p.network blockspacerace
+cel-key add my_celes_key --recover --keyring-backend test --node.type light --p2p.network blockspacerace
 ```
 # Check wallet 
 ```
@@ -75,9 +75,10 @@ cel-key list --node.type light --keyring-backend test --p2p.network blockspacera
 ```
 # delete wallet
 ```
-cel-key delete yournamewallet --node.type light --keyring-backend test --p2p.network blockspacerace
+cel-key delete my_celes_key --node.type light --keyring-backend test --p2p.network blockspacerace
 ```
-# Creat systemD (Change yourname wallet, your IP)
+# Creat systemD 
+- Change your IP, change your wallet if you want to use another wallet.
 ```
 sudo tee $HOME/celestia-lightd.service > /dev/null <<EOF
 [Unit]
@@ -85,7 +86,7 @@ sudo tee $HOME/celestia-lightd.service > /dev/null <<EOF
   After=network-online.target
 [Service]
   User=$USER
-  ExecStart=$(which celestia) light start --p2p.network blockspacerace --core.ip (Your IP) --metrics.tls=false --metrics --metrics.endpoint otel.celestia.tools:4318 --keyring.accname yournamewallet --gateway --gateway.addr (Your IP) --gateway.port 26659
+  ExecStart=$(which celestia) light start --p2p.network blockspacerace --core.ip (Your IP) --metrics.tls=false --metrics --metrics.endpoint otel.celestia.tools:4318 --keyring.accname my_celes_key --gateway --gateway.addr (Your IP) --gateway.port 26659
   Restart=on-failure
   RestartSec=10
   LimitNOFILE=4096
