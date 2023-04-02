@@ -5,7 +5,7 @@ Open cmd from your computer
 ```
 scp -r root@YourIP:/root/.celestia-light-blockspacerace-0/keys /Users
 ```
-# Run a new full node on a new machine
+# Run a new light node on a new machine
 To setup full node you can follow my guide [celestia light node setup for testnet](https://github.com/quynhgianggithub/Celestia-Light-node/blob/main/README.md)
 # Wait for the new light node on the new machine to finish sync
 # Stop service on new machine
