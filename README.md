@@ -61,19 +61,20 @@ celestia light start --p2p.network blockspacerace --core.ip (Your IP) --gateway 
 ```
 celestia light start --core.ip https://rpc-blockspacerace.pops.one/ --gateway --gateway.addr (Your IP) --gateway.port 26657 --p2p.network blockspacerace
 ```
-# Creat new wallet:
+# Commands:
+- Creat new wallet:
 ```
 cel-key add my_celes_key --keyring-backend test --node.type light --p2p.network blockspacerace
 ```
-# Recover wallet:
+- Recover wallet:
 ```
 cel-key add my_celes_key --recover --keyring-backend test --node.type light --p2p.network blockspacerace
 ```
-# Check wallet 
+- Check wallet 
 ```
 cel-key list --node.type light --keyring-backend test --p2p.network blockspacerace
 ```
-# delete wallet
+- Delete wallet
 ```
 cel-key delete my_celes_key --node.type light --keyring-backend test --p2p.network blockspacerace
 ```
