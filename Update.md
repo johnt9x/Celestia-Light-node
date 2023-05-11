@@ -1,5 +1,5 @@
 # UPDATE NEW VERSION
-Update go 1.20
+Update go 1.20.3
 ```
 ver="1.20" 
 cd $HOME 
