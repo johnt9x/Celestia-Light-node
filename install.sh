@@ -53,4 +53,9 @@ EOF
 sudo mv $HOME/celestia-lightd.service /etc/systemd/system/
 sudo systemctl enable celestia-lightd
 sudo systemctl daemon-reload
-sudo systemctl start celestia-lightd && journalctl -u celestia-lightd -o cat -f
+sudo systemctl start celestia-lightd
+
+echo '=============== PLEASE SAVE SEED PHRASE AFTER COMMAND BUILDING CEL-KEY==================='
+echo '=============== SETUP FINISHED ==================='
+echo -e 'To check logs: \e[1m\e[32mjournalctl -u celestia-lightd -o cat -f\e[0m'
+echo -e "To check adress wallet: \e[1m\e[32mcel-key list --node.type light --keyring-backend test --p2p.network blockspacerace\e[0m"
