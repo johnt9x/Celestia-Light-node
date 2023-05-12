@@ -36,14 +36,13 @@ sudo mv $HOME/celestia-node/cel-key /usr/local/bin/
 celestia light init --p2p.network blockspacerace
 
 # Create systemd service
-read -p "Enter your wallet name: " wallet_name
 sudo tee $HOME/celestia-lightd.service > /dev/null <<EOF
 [Unit]
   Description=celestia-lightd
   After=network-online.target
 [Service]
   User=$USER
-  ExecStart=$(which celestia) light start --p2p.network blockspacerace --core.ip $ip_address --metrics.tls=false --metrics --metrics.endpoint otel.celestia.tools:4318 --keyring.accname $wallet_name --gateway --gateway.addr $ip_address --gateway.port 26659
+  ExecStart=$(which celestia) light start --p2p.network blockspacerace --core.ip $ip_address --metrics.tls=false --metrics --metrics.endpoint otel.celestia.tools:4318 --keyring.accname my_celes_key --gateway --gateway.addr $ip_address --gateway.port 26659
   Restart=on-failure
   RestartSec=10
   LimitNOFILE=4096
