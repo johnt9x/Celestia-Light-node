@@ -13,7 +13,7 @@ Update git & restart lightnode
 sudo systemctl stop celestia-lightd
 cd celestia-node
 git fetch 
-git checkout v0.9.3
+git checkout v0.9.4
 make build
 sudo make install
 celestia light config-update --p2p.network blockspacerace
