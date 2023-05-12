@@ -38,7 +38,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git
 cd celestia-node/ 
-git checkout tlibssl-de4
+git checkout v0.9.4
 make build 
 make install 
 sudo mv $HOME/celestia-node/build/celestia /usr/local/bin/
