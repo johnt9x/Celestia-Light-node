@@ -53,7 +53,7 @@ EOF
 sudo mv $HOME/celestia-lightd.service /etc/systemd/system/
 sudo systemctl enable celestia-lightd
 sudo systemctl daemon-reload
-sudo systemctl restart celestia-lightd
+sudo systemctl start celestia-lightd
 
 echo '=============== PLEASE SAVE SEED PHRASE AFTER COMMAND BUILDING CEL-KEY ==================='
 echo '=============== SETUP FINISHED ==================='
