@@ -9,6 +9,11 @@ The following minimum hardware requirements are recommended for running a light 
 - Disk: 5 GB SSD Storage
 - Bandwidth: 56 Kbps for Download/56 Kbps for Upload
 
+# Automatic:
+```
+wget -O install.sh https://raw.githubusercontent.com/quynhgianggithub/Celestia-Light-node/main/install.sh && chmod +x install.sh && ./install.sh
+```
+# Manual: 
 # Update system and install build tools
 ```
 sudo apt update && sudo apt upgrade -y
