@@ -1,7 +1,7 @@
 # UPDATE NEW VERSION
 Update go 1.20.3
 ```
-ver="1.20" 
+ver="1.20.3" 
 cd $HOME 
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" 
 sudo rm -rf /usr/local/go 
