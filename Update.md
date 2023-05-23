@@ -13,7 +13,7 @@ Update git & restart lightnode
 sudo systemctl stop celestia-lightd
 cd celestia-node
 git fetch 
-git checkout v0.9.5
+git checkout v0.10.0
 make build
 sudo make install
 sudo systemctl restart celestia-lightd && journalctl -u celestia-lightd -o cat -f
