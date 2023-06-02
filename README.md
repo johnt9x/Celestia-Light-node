@@ -43,7 +43,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git
 cd celestia-node/ 
-git checkout v0.10.0
+git checkout v0.10.2
 make build 
 make install 
 sudo mv $HOME/celestia-node/build/celestia /usr/local/bin/
